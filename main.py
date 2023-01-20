@@ -113,7 +113,7 @@ def update_todo(id):
 def delete_todo(id):
   todo = Todo.query.filter_by(userid=get_user(get_jwt_identity()).id, id=id).first()
   if todo == None:
-    return 'Invalid id or unauthorized'
+    return jsonify(message='Invalid id or unauthorized')
   db.session.delete(todo) # delete the object
   db.session.commit()
   return jsonify({'message':'Deleted'}), 200
