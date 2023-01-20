@@ -1,16 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo API</title>
-</head>
-<body>
-    <h1>Todo API</h1>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Todo App</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <style>
+        html{
+            height: 100vh;
+        }
 
-    <a href="https://documenter.getpostman.com/view/583570/TWDanFZc" target="_blank">Documentation Link</a>
+        body{
+            height: 100%;
+            display:flex;
+            flex-direction: column;
+        }
 
-    <iframe src="https://documenter.getpostman.com/view/583570/TWDanFZc" frameborder="0"></iframe>
-</body>
+        iframe{
+            flex-grow: 1;
+        }
+    </style>
+  </head>
+  <body>
+
+    <nav>
+        <div class="blue nav-wrapper">
+        <a href="#!" class="brand-logo" style="margin-left: 20px;">Todo API</a>
+        <a class="right" style="margin-right:20px" href="https://documenter.getpostman.com/view/583570/TWDanFZc">Documentation Link</a>
+        </div>
+    </nav>
+
+        
+    <iframe src="apidoc.pdf" width="100%">
+ 
+
+    <script>
+      //Initialize Materialize components here
+      document.addEventListener('DOMContentLoaded', function() {
+
+        const navs = M.Sidenav.init(document.querySelectorAll('.sidenav'));
+
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
 </html>
