@@ -9,4 +9,4 @@ itsdangerous==2.1.2
 PyJWT==2.6.0
 python-dotenv==0.21.0
 SQLAlchemy==1.4.46
-Werkzeug==2.2.2
+Werkzeug==2.2.3
