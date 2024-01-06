@@ -1,0 +1,36 @@
+{
+    "name": "Flask on Heroku",
+    "description": "An example Flask app configured for Heroku deployment",
+    "repository": "https://github.com/uwidcit/todoapi",
+    "logo": "http://python.org/images/python-logo.gif",
+    "keywords": ["flask", "heroku", "gunicorn"],
+    "scripts": {
+      "postdeploy": "flask init"
+    },
+    "env": {
+      "SECRET_KEY": {
+        "description": "A secret key for session signing",
+        "generator": "secret"
+      },
+      "FLASK_APP": {
+        "description": "The entry point for the flask application",
+        "value": "wsgi.py"
+      },
+      "FLASK_ENV": {
+        "description": "The environment in which the app is running",
+        "value": "production"
+      }
+    },
+    "formation": {
+      "web": {
+        "quantity": 1,
+        "size": "free"
+      }
+    },
+    "buildpacks": [
+      {
+        "url": "heroku/python"
+      }
+    ]
+  }
+  
