@@ -14,6 +14,6 @@ $ flask run
 
 # Running the project for production.
 ```bash
-$ gunicorn wsgi.py
+$ gunicorn --bind 0.0.0.0:8080 wsgi:app
 ```
 
